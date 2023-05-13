@@ -1,17 +1,12 @@
 {
   "build": {
     "env": {
-      "NPM_CONFIG_PRODUCTION": "false",
-      "NODE_ENV": "production"
+      "CI": "false"
     },
+    "command": "npm ci && npm run build",
     "postbuild": "prisma generate",
-    "output": {
-      "include": [
-        ".next/**",
-        "public/**",
-        "api/**",
-        "node_modules/.prisma/client"
-      ]
+    "cache": {
+      "disabled": true
     }
   }
 }
