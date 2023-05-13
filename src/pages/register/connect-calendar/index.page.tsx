@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { ArrowRight, Check } from 'phosphor-react'
 import { Container, Header } from '../styles'
 import { AuthError, ConnectBox, ConnectItem } from './styles'
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 
 export default function ConnectCalendar() {
   const session = useSession()
@@ -23,9 +23,8 @@ export default function ConnectCalendar() {
 
   return (
     <>
-      <Head>
-        <title>Ignite Call - Conecte sua agenda</title>
-      </Head>
+      <NextSeo title="Conecte sua agenda do Google | Ignite Call" noindex />
+
       <Container>
         <Header>
           <Heading as="strong">Conecte sua agenda!</Heading>
