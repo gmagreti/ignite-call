@@ -3,7 +3,6 @@
     "env": {
       "CI": "false"
     },
-    "command": "npm ci && npm run build",
     "postbuild": "prisma generate",
     "cache": {
       "disabled": true
